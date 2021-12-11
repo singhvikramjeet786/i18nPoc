@@ -1,4 +1,4 @@
-export class feedback{
+export class Feedback{
     //name is undefined at first, but is treated like a string anyway
     name:string | undefined;
     //Ambient declaration:
