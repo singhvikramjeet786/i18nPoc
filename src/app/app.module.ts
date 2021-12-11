@@ -13,11 +13,14 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { FormsModule } from '@angular/forms';
+import { FeedbackComponent } from './feedback/feedback.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavBarComponent
+    NavBarComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     MatRadioModule,
     MatMenuModule,
     MatSelectModule,
-    MatToolbarModule
+    MatToolbarModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
