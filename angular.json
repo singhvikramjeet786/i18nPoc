@@ -8,8 +8,8 @@
         "locales":{
           "en": "src/translate/messages.en.xlf",
           "fr": "src/translate/messages.fr.xlf",
-          "de": "src/translate/messages.de.xlf",
-          "baseHref":""
+          "de": "src/translate/messages.de.xlf"
+          
         }
       },
       "projectType": "application",
