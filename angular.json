@@ -4,6 +4,14 @@
   "newProjectRoot": "projects",
   "projects": {
     "i18nPoc": {
+      "i18n":{
+        "locales":{
+          "en": "src/translate/messages.en.xlf",
+          "fr": "src/translate/messages.fr.xlf",
+          "de": "src/translate/messages.de.xlf",
+          "baseHref":""
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,6 +25,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": true,
             "outputPath": "dist/i18nPoc",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -61,6 +70,15 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "en": {
+              "localize": ["en"]
+            },
+            "fr": {
+              "localize": ["fr"]
+            },
+            "de": {
+              "localize": ["de"]
             }
           },
           "defaultConfiguration": "production"
@@ -70,6 +88,15 @@
           "configurations": {
             "production": {
               "browserTarget": "i18nPoc:build:production"
+            },
+            "en": {
+              "browserTarget": "i18nPoc:build:en"
+            },
+            "fr": {
+              "browserTarget": "i18nPoc:build:fr"
+            },
+            "de": {
+              "browserTarget": "i18nPoc:build:de"
             },
             "development": {
               "browserTarget": "i18nPoc:build:development"
