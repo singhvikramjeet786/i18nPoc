@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class NavBarComponent implements OnInit {
   
   siteLanguage: string | undefined = 'English';
-  siteLocale: string = 'en';
+  siteLocale!: string[];
   languageList = [
     { code: 'en', label: 'English' },
     { code: 'fr', label: 'Français' },
@@ -19,8 +19,8 @@ export class NavBarComponent implements OnInit {
 
   ngOnInit(): void {
     console.log("window.location :", window.location.pathname, window.location);
-    this.siteLocale = window.location.pathname.split('/')[1]? window.location.pathname.split('/')[1] : 'en';
-    this.siteLanguage = this.languageList.find(lang=>lang.code===this.siteLocale)?.label;
+    this.siteLocale = window.location.pathname.split('/');
+    this.siteLanguage = this.languageList.find(lang=>this.siteLocale.includes(lang.code))?.label;
   }
 
 }
